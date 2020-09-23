@@ -2,13 +2,14 @@ FROM ubuntu:latest
 
 WORKDIR /tmp
 
+ENV DEBIAN_FRONTEND noninteractive
 ENV GOVERSION 1.15.2
 ENV RTSVERSION 0.9.15
 ENV GOPATH /root/.go
 
 RUN apt-get -yqq update \
     && apt-get clean \
-    && apt-get install -yqq build-essential wget
+    && apt-get install -yqq build-essential wget ffmpeg byobu
 
 RUN cd /tmp && wget https://golang.org/dl/go${GOVERSION}.linux-amd64.tar.gz &&\
     tar -C /usr/local -xzf go${GOVERSION}.linux-amd64.tar.gz && rm go${GOVERSION}.linux-amd64.tar.gz && \
@@ -23,4 +24,5 @@ WORKDIR /tmp/rtsp-simple-server-${RTSVERSION}
 
 ENV PATH=/usr/local/go/bin:$PATH
 
-CMD [ "go", "run", "." ]
+#CMD [ "go", "run", "." ]
+
