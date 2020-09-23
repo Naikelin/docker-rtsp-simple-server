@@ -1,0 +1,15 @@
+#Crear sesion.
+byobu new-session -d -s Server
+
+#Seleccion panel por defaul (innecesario?).
+byobu select-pane -t 0
+
+#Enviar comando a la ventana por defecto. Es necesario colocar Enter para simular el mismo.
+byobu send-keys "go version" Enter
+
+#Dividir ventana horizontalmente. En este instante queda la segunda ventana activa
+byobu split-window -h
+
+#Enviar comando a la segunda ventana spliteada
+byobu send-keys "go version" Enter
+

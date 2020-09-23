@@ -24,5 +24,8 @@ WORKDIR /tmp/rtsp-simple-server-${RTSVERSION}
 
 ENV PATH=/usr/local/go/bin:$PATH
 
-#CMD [ "go", "run", "." ]
+COPY start.sh /
 
+RUN chmod +x /start.sh
+
+CMD /start.sh
