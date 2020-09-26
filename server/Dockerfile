@@ -26,6 +26,8 @@ ENV PATH=/usr/local/go/bin:$PATH
 
 COPY start.sh /
 
+COPY video.mp4 /
+
 RUN chmod +x /start.sh
 
 CMD /start.sh
