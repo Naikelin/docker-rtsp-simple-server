@@ -24,4 +24,4 @@ $ docker build -t rtsp:client . && docker run -it rtsp:client
 
 A continuación, se muestra cómo utilizar el software utilizado a través de un video, junto con unas pruebas del funcionamiento de protocolo RTSP como patrones de tráfico:
 
-[![Alt text for your video](http://i3.ytimg.com/vi/oavMtUWDBTM/hqdefault.jpg)](https://www.youtube.com/watch?v=oavMtUWDBTM)
+[![Video para tarea!](https://imgur.com/p4qQwsA)](https://youtu.be/OyYM2XeqFFI)
