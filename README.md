@@ -5,8 +5,7 @@ Este repositorio posee como finalidad el analisis de cliente-servdor para el pro
 Para esto, se ha decidio utilizar el software libre servidor [rtsp-simple-server](https://github.com/aler9/rtsp-simple-server) y cliente [ffmpeg](https://ffmpeg.org/releases).
 
 ### Instalación
-Para ejecutar los dockerfile, usted necesita instalar [Docker](https://www.docker.com/get-started).
-
+Para ejecutar los dockerfile, usted necesita instalar [Docker](https://www.docker.com/get-started)
 Luego, para iniciar el servidor utilizando la ip 172.17.0.2
 
 ```sh
