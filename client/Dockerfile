@@ -31,7 +31,7 @@ RUN apt-get update -qq && apt-get -y install \
       libmp3lame-dev \
       libopus-dev \
       libx264-dev \
-      libfdk-aac-dev
+      libfdk-aac-dev 
 
 RUN mkdir -p ~/ffmpeg_sources ~/bin && cd ~/ffmpeg_sources && \
     wget -O ffmpeg-${FFMPEG_VERSION}.tar.bz2 https://ffmpeg.org/releases/ffmpeg-${FFMPEG_VERSION}.tar.bz2 && \
@@ -60,4 +60,8 @@ RUN mkdir -p ~/ffmpeg_sources ~/bin && cd ~/ffmpeg_sources && \
     hash -r
 RUN mv ~/bin/ffmpeg /usr/local/bin && mv ~/bin/ffprobe /usr/local/bin && mv ~/bin/ffplay /usr/local/bin
 
-CMD ffmpeg -i rtsp://172.17.0.2:8554/mystream -c copy output.mp4
+RUN apt-get -y install iproute2 tcpdump
+
+RUN echo ffmpeg -i rtsp://172.17.0.2:8554/mystream -c copy output.mp4 > comandos.txt
+
+CMD bash

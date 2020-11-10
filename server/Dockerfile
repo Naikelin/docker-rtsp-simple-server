@@ -30,4 +30,6 @@ COPY video.mp4 /
 
 RUN chmod +x /start.sh
 
+RUN apt-get -y install iproute2 tcpdump
+
 CMD /start.sh
